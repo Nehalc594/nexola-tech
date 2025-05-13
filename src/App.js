@@ -1,3 +1,7 @@
+import NotFound from './pages/NotFound';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import CaseStudyDetail from './pages/CaseStudyDetail';
 import CaseStudies from './pages/CaseStudies';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import React from 'react';
@@ -23,6 +27,10 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <ScrollToTopButton />

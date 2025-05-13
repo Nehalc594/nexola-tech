@@ -13,6 +13,26 @@ const faqs = [
     question: 'Is there a contract required for services?',
     answer: 'We offer both one-time audits and ongoing support — no long-term commitment unless you need one.',
   },
+  {
+    question: "What services does Nexola Tech offer?",
+    answer: "We offer cybersecurity consulting, managed IT security, compliance support, and cloud security."
+  },
+  {
+    question: "How quickly can you onboard a new client?",
+    answer: "We can typically start engagement within 24–48 hours after our initial discovery call."
+  },
+  {
+    question: "Do you provide 24/7 support?",
+    answer: "Yes, 24/7 threat monitoring and response is included in our Professional and Enterprise plans."
+  },
+  {
+    question: "Can you help us meet regulatory compliance?",
+    answer: "Yes — we specialize in NIST, ISO27001, SOC 2, HIPAA, and GDPR alignment."
+  },
+  {
+    question: "What makes Nexola Tech different?",
+    answer: "We're fast, security-focused, and led by experienced professionals who’ve secured enterprise and critical infrastructure systems."
+  },
 ];
 
 const FAQSection = () => {

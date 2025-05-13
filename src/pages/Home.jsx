@@ -1,3 +1,5 @@
+import posts from '../utils/getPosts';
+import { Link } from 'react-router-dom';
 import NewsletterSignup from '../components/NewsletterSignup';
 import FAQSection from '../components/FAQSection';
 import React from 'react';
@@ -32,6 +34,32 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="mt-16 max-w-4xl mx-auto px-6">
+  <h2 className="text-3xl font-bold text-gray-800 mb-6">Latest Blog Posts</h2>
+  
+  <div className="space-y-6">
+    {posts.slice(0, 3).map((post) => (
+      <Link
+        key={post.slug}
+        to={`/blog/${post.slug}`}
+        className="block bg-white p-6 rounded shadow hover:shadow-md transition"
+      >
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">{post.title}</h3>
+        <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+        <p className="text-gray-600">{post.excerpt}</p>
+      </Link>
+    ))}
+  </div>
+
+  <div className="text-center mt-6">
+    <Link
+      to="/blog"
+      className="inline-block text-green-600 hover:text-green-800 font-semibold mt-4"
+    >
+      View All Blog Posts →
+    </Link>
+  </div>
+</section>
       <NewsletterSignup />
       <FAQSection />
     </div>

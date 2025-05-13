@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section className="relative text-white">
+    <section className="relative text-white overflow-hidden max-w-[100vw]">
       {/* Background SVG Wave */}
       <div className="absolute inset-0">
         <img
-          src="https://www.svgrepo.com/show/353655/wave-top.svg"
-          alt="Wave"
-          className="w-full h-full object-cover opacity-20"
-        />
+  src="https://www.svgrepo.com/show/353655/wave-top.svg"
+  alt="Wave"
+  className="w-full h-full object-cover opacity-20 max-w-none"
+/>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-gray-900 opacity-90" />
       </div>
 
@@ -29,7 +29,7 @@ const HeroSection = () => {
           Nexola Tech provides enterprise-grade cybersecurity consulting and managed security services to protect your data, people, and reputation.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center max-w-full">
           <Link
             to="/contact"
             className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition"
@@ -48,7 +48,7 @@ const HeroSection = () => {
       {/* Client Logos / Trust Badges */}
       <div className="relative z-10 mt-12 px-6 max-w-6xl mx-auto">
         <h3 className="text-white text-center mb-4 text-lg font-medium">Trusted by:</h3>
-        <div className="flex flex-wrap items-center justify-center gap-8 opacity-90">
+        <div className="flex flex-wrap items-center justify-center gap-8 opacity-90 max-w-full overflow-hidden">
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" className="h-8" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className="h-8" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Google_2015_logo.svg" alt="Google" className="h-8" />
