@@ -1,3 +1,4 @@
+import CaseStudies from './pages/CaseStudies';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
       </Routes>
       <Footer />
       <ScrollToTopButton />

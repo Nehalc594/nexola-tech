@@ -9,6 +9,7 @@ const Navbar = () => (
     <Link to="/services" style={{ margin: '0 1rem' }}>Services</Link>
     <Link to="/pricing" style={{ margin: '0 1rem' }}>Pricing</Link>
     <Link to="/contact" style={{ margin: '0 1rem' }}>Contact</Link>
+    <Link to="/case-studies" className="hover:text-green-400">Case Studies</Link>
   </nav>
 );
 
