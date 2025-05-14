@@ -61,10 +61,16 @@ const Services = () => {
     className="w-full max-w-[480px] h-auto object-contain"
   />
 </div>
-            <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 py-8 lg:py-0">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">{service.title}</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">{service.description}</p>
-            </div>
+            <div className="w-full lg:w-1/2 px-4 py-6 lg:py-0 flex flex-col justify-center">
+  <div className="max-w-[600px] mx-auto">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-snug">
+      {service.title}
+    </h2>
+    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
+      {service.description}
+    </p>
+  </div>
+</div>
           </div>
         ))}
       </div>
