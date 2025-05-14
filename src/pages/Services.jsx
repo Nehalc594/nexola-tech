@@ -54,11 +54,11 @@ const Services = () => {
               index % 2 === 1 ? 'lg:flex-row-reverse' : ''
             } w-full min-h-[400px] mb-20`}
           >
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 flex justify-center items-center p-4">
   <img
     src={service.image}
     alt={service.title}
-    className="w-full h-auto max-h-[400px] lg:max-h-none object-contain"
+    className="w-full max-w-[480px] h-auto object-contain"
   />
 </div>
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 py-8 lg:py-0">
