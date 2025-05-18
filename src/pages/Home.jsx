@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
       <Helmet>
-        <title>Cybersecurity Consulting & Services | Nexola Tech</title>
+        <title>Nexola Tech</title>
         <meta name="description" content="Nexola Tech provides expert cybersecurity consulting, penetration testing, compliance, and managed security solutions to protect your business." />
         <meta property="og:title" content="Cybersecurity Consulting & Services | Nexola Tech" />
         <meta property="og:description" content="Expert cybersecurity services tailored to secure your infrastructure, applications, and data. Book a free security audit today." />
