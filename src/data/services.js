@@ -7,49 +7,49 @@ import {
   FiCloud,
 } from 'react-icons/fi';
 
-const services = [
+const serviceData = [
   {
-  title: 'Vulnerability Assessments',
-  slug: 'vulnerability-assessments',
-  description: 'Identify and prioritize security flaws in your network, systems, and applications.',
-  icon: <FiShield size={24} className="text-green-600" />,
-  price: '$499',
-  features: [
-    'Surface & deep vulnerability scanning',
-    'Risk scoring and prioritization',
-    'PDF report within 5 business days'
-  ]
-},
+    title: 'Vulnerability Assessments',
+    slug: 'vulnerability-assessments',
+    description: 'We scan your systems to uncover critical vulnerabilities before attackers do. Our detailed reports help you prioritize and fix issues fast.',
+    image: '/images/services/vulnerability.png',
+    icon: FiShield,
+  },
   {
     title: 'Penetration Testing',
     slug: 'penetration-testing',
-    description: 'Simulated cyberattacks to test your defenses and report actionable weaknesses.',
-    icon: <FiTarget size={24} className="text-green-600" />,
+    description: 'We simulate real-world attacks to find weak spots in your applications, APIs, and infrastructure. Includes exploit evidence and remediation steps.',
+    image: '/images/services/penetration.png',
+    icon: FiTarget,
   },
   {
     title: 'Managed IT Security',
     slug: 'managed-it-security',
-    description: '24/7 monitoring, patching, and threat prevention tailored for growing businesses.',
-    icon: <FiServer size={24} className="text-green-600" />,
+    description: 'End-to-end support with 24/7 monitoring, patch management, antivirus, and response — all managed by our expert security team.',
+    image: '/images/services/managed-security.png',
+    icon: FiServer,
   },
   {
     title: 'Compliance Consulting',
     slug: 'compliance-consulting',
-    description: 'Prepare and align with NIST, ISO27001, SOC 2, HIPAA, and GDPR standards.',
-    icon: <FiCheckCircle size={24} className="text-green-600" />,
+    description: 'We help you prepare for audits, close gaps, and align with NIST, ISO27001, SOC 2, HIPAA, and GDPR without the stress.',
+    image: '/images/services/compliance.png',
+    icon: FiCheckCircle,
   },
   {
     title: 'Incident Response',
     slug: 'incident-response',
-    description: 'Immediate support to identify, contain, and recover from cybersecurity incidents.',
-    icon: <FiAlertCircle size={24} className="text-green-600" />,
+    description: 'Our experts respond rapidly to security breaches, isolate threats, and help your business recover securely with full forensics.',
+    image: '/images/services/incident-response.png',
+    icon: FiAlertCircle,
   },
   {
     title: 'Cloud Security',
     slug: 'cloud-security',
-    description: 'Protect your AWS, Azure, and Google Cloud infrastructure from advanced threats.',
-    icon: <FiCloud size={24} className="text-green-600" />,
+    description: 'Secure your cloud with identity hardening, segmentation, logging, and detection for AWS, Azure, or Google Cloud.',
+    image: '/images/services/cloud-security.png',
+    icon: FiCloud,
   },
 ];
 
-export default services;
+export default serviceData;

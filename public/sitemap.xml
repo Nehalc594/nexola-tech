@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
+  <url>
+    <loc>https://nexolatech.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/services</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/pricing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/blog</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://nexolatech.com/blog/top-5-cybersecurity-trends-2025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/blog/importance-of-penetration-testing</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/blog/incident-response-best-practices</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Services Detail Pages -->
+  <url>
+    <loc>https://nexolatech.com/services/vulnerability-assessment</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/services/penetration-testing</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/services/managed-it-security</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/services/incident-response</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/services/cloud-security</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nexolatech.com/services/network-penetration-testing</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>

@@ -1,57 +1,59 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import Footer from '../components/Footer';
 
 const Pricing = () => {
-  const plans = [
-    {
-      title: 'Starter',
-      price: '$499',
-      features: ['Basic Security Audit', 'Email Support', 'Report in 5 Days'],
-      cta: 'Get Started',
-    },
-    {
-      title: 'Professional',
-      price: '$1,299',
-      features: ['Full Vulnerability Scan', '24/7 Monitoring', 'Detailed Remediation Plan'],
-      cta: 'Book Now',
-    },
-    {
-      title: 'Enterprise',
-      price: 'Contact Us',
-      features: ['Custom Security Solutions', 'Dedicated Team', 'On-Site Audit & Compliance'],
-      cta: 'Schedule a Call',
-    },
-  ];
-
   return (
-    <div className="py-20 px-6 bg-gray-50 text-center">
-      <h2 className="text-4xl font-bold mb-8 text-gray-800">Pricing Plans</h2>
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {plans.map((plan, index) => (
-          <motion.div
-            key={index}
-            className="bg-white rounded-lg shadow hover:shadow-lg p-8 transition"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-          >
-            <h3 className="text-2xl font-semibold mb-2">{plan.title}</h3>
-            <p className="text-3xl font-bold text-green-600 mb-4">{plan.price}</p>
-            <ul className="text-gray-600 mb-6 space-y-2">
-              {plan.features.map((feature, i) => (
-                <li key={i}>✔️ {feature}</li>
-              ))}
+    <div className="min-h-screen bg-white text-gray-800">
+      <div className="max-w-6xl mx-auto py-20 px-6">
+        <h1 className="text-4xl font-bold text-center mb-12">Pricing Plans</h1>
+        <p className="text-center text-lg text-gray-600 mb-16 max-w-3xl mx-auto">
+          Choose the plan that suits your business size and security needs. All packages include 24/7 support and access to our certified security consultants.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Basic Plan */}
+          <div className="border rounded-lg shadow p-6 text-center">
+            <h2 className="text-2xl font-bold mb-4">Starter</h2>
+            <p className="text-4xl font-extrabold text-green-600 mb-2">$499</p>
+            <p className="text-sm text-gray-500 mb-6">per month</p>
+            <ul className="space-y-3 text-sm text-left mb-6">
+              <li>✔ Vulnerability Scans</li>
+              <li>✔ Monthly Report</li>
+              <li>✔ Email Support</li>
             </ul>
-            <a
-              href="/contact"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded transition"
-            >
-              {plan.cta}
-            </a>
-          </motion.div>
-        ))}
+            <button className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Get Started</button>
+          </div>
+
+          {/* Growth Plan */}
+          <div className="border-2 border-green-600 rounded-lg shadow-lg p-6 text-center">
+            <h2 className="text-2xl font-bold mb-4">Professional</h2>
+            <p className="text-4xl font-extrabold text-green-600 mb-2">$1,499</p>
+            <p className="text-sm text-gray-500 mb-6">per month</p>
+            <ul className="space-y-3 text-sm text-left mb-6">
+              <li>✔ Penetration Testing</li>
+              <li>✔ Weekly Reports</li>
+              <li>✔ Phone & Email Support</li>
+              <li>✔ Compliance Consulting</li>
+            </ul>
+            <button className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Choose Plan</button>
+          </div>
+
+          {/* Enterprise Plan */}
+          <div className="border rounded-lg shadow p-6 text-center">
+            <h2 className="text-2xl font-bold mb-4">Enterprise</h2>
+            <p className="text-4xl font-extrabold text-green-600 mb-2">Custom</p>
+            <p className="text-sm text-gray-500 mb-6">Tailored pricing</p>
+            <ul className="space-y-3 text-sm text-left mb-6">
+              <li>✔ Dedicated Security Engineer</li>
+              <li>✔ 24/7 Monitoring & Response</li>
+              <li>✔ SLA-Backed Uptime</li>
+              <li>✔ Full Compliance & Audit Prep</li>
+            </ul>
+            <button className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Contact Sales</button>
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

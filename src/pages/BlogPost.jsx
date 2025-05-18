@@ -1,33 +1,68 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-
-// Import your markdown string (exported from .md.js)
-import howToHardenAws from '../posts/how-to-harden-aws.md.js';
-
-const postMap = {
-  'how-to-harden-aws': howToHardenAws,
-};
+import { Helmet } from 'react-helmet';
+import Footer from '../components/Footer';
+import blogPosts from '../data/blogPosts';
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const raw = postMap[slug];
+  const post = blogPosts.find((p) => p.slug === slug);
 
-  if (!raw) {
-    return <div className="text-center py-20 text-red-600">⚠️ Post not found.</div>;
+  if (!post) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <h1 className="text-2xl text-gray-600">Post not found.</h1>
+      </div>
+    );
   }
 
-  const { content, data } = matter(raw);
-
   return (
-    <div className="py-20 px-6 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4 text-gray-800">{data.title}</h1>
-      <p className="text-sm text-gray-500 mb-6">{data.date}</p>
-      <ReactMarkdown className="prose prose-lg text-gray-700" remarkPlugins={[remarkGfm]}>
-        {content}
-      </ReactMarkdown>
+    <div className="min-h-screen bg-white text-gray-800">
+      <Helmet>
+        <title>{post.title} | Nexola Tech</title>
+        <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.image} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={post.image} />
+
+        {/* Structured Data: Article */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "${post.title}",
+            "description": "${post.excerpt}",
+            "image": "${post.image}",
+            "author": {
+              "@type": "Organization",
+              "name": "Nexola Tech"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Nexola Tech",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://nexolatech.com/logo.png"
+              }
+            },
+            "datePublished": "${post.date}"
+          }
+        `}</script>
+      </Helmet>
+
+      <div className="max-w-3xl mx-auto py-20 px-6">
+        <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+        <img src={post.image} alt={post.title} className="w-full h-auto rounded mb-8" />
+        <p className="text-gray-600 mb-4 text-sm">Published on {post.date}</p>
+        <div className="prose max-w-none">{post.content}</div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
