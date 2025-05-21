@@ -52,7 +52,7 @@ const Layout = () => {
       animate={{ opacity: 1, height: "auto" }}
       exit={{ opacity: 0, height: 0 }}
       transition={{ duration: 0.3 }}
-      className="sm:hidden bg-[#0c1b3a] px-4 pb-4 space-y-2 text-sm font-medium text-white overflow-hidden"
+      className="sm:hidden bg-[#0c1b3a] px-4 pb-4 space-y-2 text-sm font-medium text-white overflow-visible"
     >
       <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
       <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
