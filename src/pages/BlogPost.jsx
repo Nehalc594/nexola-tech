@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Footer from '../components/Footer';
+
 import blogPosts from '../data/blogPosts';
 
 const BlogPost = () => {
@@ -62,7 +62,7 @@ const BlogPost = () => {
         <div className="prose max-w-none">{post.content}</div>
       </div>
 
-      <Footer />
+      
     </div>
   );
 };

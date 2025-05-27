@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../components/Footer';
+
 
 const Pricing = () => {
   return (
@@ -53,7 +53,7 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 };

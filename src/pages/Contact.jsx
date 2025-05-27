@@ -221,7 +221,7 @@ const Contact = () => {
 >
   <h2 className="text-2xl font-bold mb-3">Any questions? Get in touch today.</h2>
   <p className="text-green-100 mb-4">We're here to answer your security concerns.</p>
-  <p className="text-white font-semibold text-lg">📞 +1 (123) 456-7890</p>
+  <p className="text-white font-semibold text-lg">📞 +1 (812) 222-1730</p>
   <p className="text-white font-semibold text-lg">✉️ support@nexolatech.com</p>
 </motion.section>
 

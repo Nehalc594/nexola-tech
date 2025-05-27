@@ -53,7 +53,7 @@ const Footer = () => {
           <h3 className="text-md font-semibold mb-2">Contact</h3>
           <ul className="text-sm space-y-2">
             <li>Email: support@nexolatech.com</li>
-            <li>Phone: (123) 456-7890</li>
+            <li>Phone: (812) 223-1730</li>
             <li>Address: Remote Worldwide 🌐</li>
           </ul>
         </div>
